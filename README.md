@@ -1,1 +1,13 @@
-# Generator-datasets
+# Generator datasets
+
+Генерация наборов данных по описанной в JSON структуре.
+
+Доступны 5 типов полей для генерации:
+
+* str — строковый;
+* float — вещественный;
+* int — целый;
+* datetime — дата/время;
+* bool — логический.
+
+Подробное описание JSON по ссылке: [data/dataset.md](data/dataset.md)
