@@ -10,15 +10,42 @@ import click
 
 
 def str_to_datetime(string):
-    """Преобразование строки в datetime"""
+    """
+    Преобразование строки в datetime
+
+    Аргумент:
+    string -- строка для преобразования в Дату/время
+    """
     return datetime.datetime.strptime(string, '%d.%m.%Y %H:%M:%S')
 
 
 def random_date(start, end):
-    """Генерация datetime между `start` и `end`"""
+    """
+    Генерация даты между заданными
+
+    Аргументы:
+    start -- начальная дата генерации
+    end -- конечная дата генерации
+    """
     return start + datetime.timedelta(
         seconds=random.randint(0, int((end - start).total_seconds()))
     )
+
+
+def generate_string(min_length, max_length, characters):
+    """
+    Генерация строки заданной длины с случайнми символами
+
+    Аргументы:
+    min_length -- минимальная длина строки
+    max_length -- максимальная длина строки
+    characters -- строка символов для генерации
+    """
+
+    character = random.randint(0, len(characters) - 1)
+
+    # Для строки случайной длины выбирается случайный символ из заданной строки
+    return ''.join(characters[character] for i in range(0, random.randint(min_length, max_length)))
 
 
 @click.command()
@@ -28,7 +55,10 @@ def random_date(start, end):
 )
 def main(file_json):
     """
-    Генерация наборов данных по описанной в JSON структуре.
+    Генерация наборов данных по описанной в JSON структуре
+
+    Аргумент:
+    file_json -- путь к файлу JSON
     """
     # Время начала выполнения
     start_time = time.time()
@@ -65,7 +95,8 @@ def main(file_json):
             min_value = dataset["columns"][col]["min_value"]
             max_value = dataset["columns"][col]["max_value"]
             type_value = dataset["columns"][col]["type_value"]
-            string_name = dataset["columns"][col]["string_name"]
+            string_random = dataset["columns"][col]["string_random"]
+            string = dataset["columns"][col]["string"]
             round_value = dataset["columns"][col]["round_value"]
 
             # Генерация значений для целого и вещественного типа
@@ -78,7 +109,10 @@ def main(file_json):
                 else:
                     values.append(str(random.uniform(min_value, max_value)))
             elif type_value == "str":
-                values.append(string_name + str(row + 1))
+                if string_random:
+                    values.append(generate_string(min_value, max_value, string))
+                else:
+                    values.append(string + str(row + 1))
             elif type_value == "bool":
                 int_value = random.randint(0, 1)
                 if int_value == 0:
