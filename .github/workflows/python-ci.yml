@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8']
+        python-version: [ '3.5', '3.6', '3.7', '3.8']
         architecture: [ x64, x86 ]
-    name: Python ${{ matrix.python-version }}
+    name: Python ${{ matrix.python-version }} ${{ matrix.architecture }}
     steps:
     - uses: actions/checkout@v1
-    - name: Setup Python ${{ matrix.python-version }}
+    - name: Setup Python ${{ matrix.python-version }} ${{ matrix.architecture }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
