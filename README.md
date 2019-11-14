@@ -11,3 +11,9 @@
 * **bool** — логический.
 
 Подробное описание JSON по ссылке: [data/dataset.md](data/dataset.md)
+
+## Требования
+
+1. Python-библиотека `click`.
+
+   Для установки используете `pip install click` или `conda install -c anaconda click`.
