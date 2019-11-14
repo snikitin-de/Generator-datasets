@@ -26,52 +26,52 @@
 ```json
 {
     "variables" : {
-	    "row_count"   : 1000,
+	"row_count"   : 1000,
         "file_dataset": "dataset.csv",
         "separator"   : ";",
-	    "random_seed" : "12345678"
+	"random_seed" : "12345678"
     },
     "columns" : {
-		"col1" : {
-			"min_value"     : 5,
-			"max_value"     : 10,
-			"type_value"    : "str",
-			"string_random" : true,
-			"string"        : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-			"round_value"   : null
-		},
-		"col2" : {
-			"min_value"     : 10000,
-			"max_value"     : 150200,
-			"type_value"    : "float",
-			"string_random" : null,
-			"string"        : null,
-			"round_value"   : 2
-		},
-		"col3" : {
-			"min_value"     : 1,
-			"max_value"     : 32,
-			"type_value"    : "int",
-			"string_random" : null,
-			"string"        : null,
-			"round_value"   : null
-		},
-		"col4" : {
-			"min_value"     : null,
-			"max_value"     : null,
-			"type_value"    : "bool",
-			"string_random" : null,
-			"string"        : null,
-			"round_value"   : null
-		},
-		"col5" : {
-			"min_value"     : "01.01.2017 00:00:00",
-			"max_value"     : "01.01.2019 23:59:59",
-			"type_value"    : "datetime",
-			"string_random" : null,
-			"string"        : null,
-			"round_value"   : null
-		}
+	"col1" : {
+		"min_value"     : 5,
+		"max_value"     : 10,
+		"type_value"    : "str",
+		"string_random" : true,
+		"string"        : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+		"round_value"   : null
+	},
+	"col2" : {
+		"min_value"     : 10000,
+		"max_value"     : 150200,
+		"type_value"    : "float",
+		"string_random" : null,
+		"string"        : null,
+		"round_value"   : 2
+	},
+	"col3" : {
+		"min_value"     : 1,
+		"max_value"     : 32,
+		"type_value"    : "int",
+		"string_random" : null,
+		"string"        : null,
+		"round_value"   : null
+	},
+	"col4" : {
+		"min_value"     : null,
+		"max_value"     : null,
+		"type_value"    : "bool",
+		"string_random" : null,
+		"string"        : null,
+		"round_value"   : null
+	},
+	"col5" : {
+		"min_value"     : "01.01.2017 00:00:00",
+		"max_value"     : "01.01.2019 23:59:59",
+		"type_value"    : "datetime",
+		"string_random" : null,
+		"string"        : null,
+		"round_value"   : null
+	}
     }
 }
 ```
