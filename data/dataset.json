@@ -1,9 +1,9 @@
 {
     "variables" : {
-		"row_count"   : 1000,
+	"row_count"   : 1000,
         "file_dataset": "dataset.csv",
         "separator"   : ";",
-		"random_seed" : "12345678"
+	"random_seed" : "12345678"
     },
     "columns" : {
 		"col1" : {
