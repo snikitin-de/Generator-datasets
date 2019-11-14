@@ -14,6 +14,5 @@
 
 ## Требования
 
-1. Python-библиотека `click`.
-
-   Для установки используете `pip install click` или `conda install -c anaconda click`.
+1. Интерпретатор Python, скачать можно по ссылке: https://www.python.org/downloads/
+2. Python-библиотека `click`, для установки используете `pip install click` или `conda install -c anaconda click`.
