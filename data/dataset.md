@@ -31,7 +31,7 @@
             "random_seed" : "12345678"
         },
         "columns" : {
-            "col1" : {  # Имя поля
+            "col1" : {
                 "min_value"   : null,
                 "max_value"   : null,
                 "type_value"  : "str",
