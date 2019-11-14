@@ -6,13 +6,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: [ '2.x', '3.x', 'pypy2', 'pypy3' ]
+    name: Python version ${{ matrix.python-version }}
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
+    - name: Setup Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: ${{ matrix.python-version }}
     - name: Install libraries
       run: |
         python -m pip install --upgrade pip
@@ -20,3 +23,4 @@ jobs:
     - name: Run program
       run: |
         python generator_datasets.py -j data/dataset.json
+        
