@@ -20,7 +20,7 @@ jobs:
     - name: Install libraries
       run: |
         python -m pip install --upgrade pip
-        pip install click
+        pip install -r requirements.txt
     - name: Run program
       run: |
         python generator_datasets.py -j data/dataset.json
