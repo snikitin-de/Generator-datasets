@@ -135,7 +135,7 @@ def main(file_json):
     seconds = time.time() - start_time
 
     # Вывод времени генерации датасета
-    print(f"{row_count} rows, {seconds} seconds")
+    print("{} rows, {} seconds".format(row_count, seconds))
 
 
 if __name__ == "__main__":
