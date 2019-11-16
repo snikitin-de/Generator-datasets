@@ -23,7 +23,9 @@ jobs:
         pip install -r requirements.txt
     - name: Code analysis with PyLint
       run: |
+        echo "Analysis generetor.py"
         python -m pylint --reports=y generator.py
+        echo "Analysis generator_datasets.py"
         python -m pylint --reports=y generator_datasets.py
     - name: Run program
       run: |
