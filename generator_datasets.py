@@ -65,9 +65,12 @@ def main(file_json):
             elif type_value == "bool":
                 value = generator.generate_bool()
             elif type_value == "datetime":
-                value = generator.generate_datetime(min_value,
-                                                    max_value,
-                                                    dataset["columns"][col]["datetime_format"])
+                value = generator.\
+                        generate_datetime(min_value,
+                                          max_value,
+                                          dataset["columns"][col]["datetime_format"]).strftime(
+                                              dataset["columns"][col]["datetime_format"]
+                                          )
 
             values.append(str(value))
 
