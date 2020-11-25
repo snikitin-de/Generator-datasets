@@ -1,8 +1,12 @@
 name: Tests
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+     - 'README.md'
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
@@ -29,8 +33,4 @@ jobs:
         python -m pylint --reports=y generator_datasets.py
     - name: Run program
       run: |
-        python generator_datasets.py -j data/dataset.json
-        
-        
-        
-        
+        python generator_datasets.py -j data/dataset.json  
