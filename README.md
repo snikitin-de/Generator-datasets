@@ -14,13 +14,23 @@
 
 Для работы программы требуется библиотека `click`.
 
-Установить ее можно через PIP командой: `pip install click`, либо через Anaconda командой `conda install -c anaconda click`.
+Установить библиотеку через PIP можно командой:
 
-Также необходимую библиотеку можно установить командой `pip install -r requirements.txt`.
+`pip install click`
+
+Установить библиотеку через Anaconda можно командой:
+
+`conda install -c anaconda click`.
+
+Также необходимую библиотеку можно установить командой:
+
+`pip install -r requirements.txt`.
 
 ## Использование
 
-Для выполнения программы необходимо в терминал ввести команду: `python generator_datasets.py -j data\dataset.json`.
+Для выполнения программы необходимо в терминал ввести команду:
+
+`python generator_datasets.py -j data\dataset.json`.
 
 ## Описание формата конфигурации датасета
 
